@@ -64,7 +64,7 @@ Recommends:     (mangohud(x86-32) if glibc(x86-32))
 Suggests:       %{name}-mangoplot
 Suggests:       goverlay
 
-Provides:       mangohud = %{version}
+Provides:       mangohud = %{version}-%{release}
 Provides:       bundled(imgui) = %{imgui_ver}
 Provides:       bundled(implot) = %{implot_ver}
 Provides:       bundled(vulkan-headers) = %{vulkan_headers_ver}
@@ -83,6 +83,7 @@ BuildArch:      noarch
 Requires:       %{name} = %{version}-%{release}
 Requires:       python3-matplotlib
 Requires:       python3-numpy
+Provides:       mangohud-mangoplot = %{version}-%{release}
 
 %description    mangoplot
 Local visualization "mangoplot" for %{name}.
@@ -159,9 +160,9 @@ sed -i "s@#!/usr/bin/env python@#!/usr/bin/python3@" \
 %{_bindir}/mangohudctl
 %{_datadir}/icons/hicolor/scalable/*/*.svg
 %{_datadir}/vulkan/implicit_layer.d/*Mango*.json
-%{_docdir}/%{name}/%{appname}.conf.example
-%{_docdir}/%{name}/presets.conf.example
-%{_libdir}/%{name}/
+%{_docdir}/%{packagename}/%{appname}.conf.example
+%{_docdir}/%{packagename}/presets.conf.example
+%{_libdir}/%{packagename}/
 %{_mandir}/man1/%{name}.1*
 %{_mandir}/man1/mangoapp.1*
 %{_metainfodir}/*.metainfo.xml

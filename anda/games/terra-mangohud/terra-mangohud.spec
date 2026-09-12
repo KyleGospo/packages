@@ -163,7 +163,7 @@ sed -i "s@#!/usr/bin/env python@#!/usr/bin/python3@" \
 %{_docdir}/%{packagename}/%{appname}.conf.example
 %{_docdir}/%{packagename}/presets.conf.example
 %{_libdir}/%{packagename}/
-%{_mandir}/man1/%{name}.1*
+%{_mandir}/man1/%{packagename}.1*
 %{_mandir}/man1/mangoapp.1*
 %{_metainfodir}/*.metainfo.xml
 
